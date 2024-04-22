@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 145%;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: hsl(30, 54%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc-page {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(30, 10%, 34%);
+    width: 46em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5em 0;
+    border-radius: 1.5em;
+    gap: 1.5em;
+}
+
+.header__image {
+    width: 41em;
+    border-radius: 0.75em;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 41em;
+    gap: 2em;
+}
+
+.main__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.title {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-size: 2.75em;
+    color: hsl(24, 5%, 18%);
+}
+
+.main__preparation {
+    background-color: hsl(330, 100%, 98%);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.75rem;
+    border-radius: 0.75em;
+}
+
+.subtitle1 {
+    font-size: 1.25em;
+    color: hsl(332, 51%, 32%);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding-left: 1.75em;
+}
+
+.main__list__item {
+    padding-left: 1em;
+}
+
+.subtitle {
+    color: hsl(14, 45%, 36%);
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-size: 1.75em;
+}
+
+.main__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding-left: 1.35em;
+}
+
+.main__hr {
+    width: 41em;
+    border: 1px solid hsl(30, 54%, 90%);
+}
+
+.main__table {
+    width: 41em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.table__section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10em;
+}
+
+
+.table__head {
+    font-weight: 400;
+    padding: 0.75em 0 0.75em 2em;
+}
+
+.table__item {
+    text-align: left;
+    width: 2em;
+    padding: 0.75em 0;
+    font-weight: 700;
+    color: hsl(14, 45%, 36%);
+    padding: 0.75em 18em 0.75em 0;
+}
+
+/* Styles de base inchangés pour la version de bureau */
+
+@media only screen and (max-width: 738px) {
+    body {
+        background-color: hsl(0, 0%, 100%);
+        height: 130%;
+    }
+
+    .header__image {
+        width: 100%; /* Permet à l'image de s'ajuster à la largeur du bloc */
+        height: auto; /* Maintient l'aspect ratio de l'image */
+        padding-top: 0;
+        border-radius: 0;
+    }
+
+    .title {
+        font-size: 2rem; /* Ajuste la taille de la police pour le titre */
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .subtitle, .subtitle1 {
+        font-size: 1.75rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .main__description, .list__item {
+        font-size: 1rem; /* Ajuste la taille de la police pour le contenu */
+        text-align: left; /* Aline le texte à gauche pour le contenu */
+        padding: 0.25rem 1rem; /* Ajoute un peu d'espace autour du contenu */
+    }
+
+    .main__section {
+        padding: 0 1.75em;
+    }
+    
+    .main__preparation, .main__section {
+        width: 90%; /* Permet aux sections de s'ajuster à la largeur du bloc */
+    }
+    
+    .list, .main__list {
+        padding-left: 0; /* Supprime le padding à gauche pour les listes */
+        list-style-position: inside; /* Place la puce à l'intérieur du flux de contenu */
+    }
+    
+    .main__hr {
+        width: 90%; /* Ajuste la largeur de la ligne horizontale à son conteneur */
+    }
+    
+    .main__table {
+        width: 100%; /* Ajuste la largeur du tableau de nutrition à son conteneur */
+        margin-top: 1rem; /* Ajoute un peu d'espace au-dessus du tableau */
+    }
+    
+    .table__section {
+        align-items: center; /* Centre les éléments dans la section */
+        gap: 0.25rem; /* Ajuste l'espace entre les éléments */
+        border-bottom: 0; /* Supprime la bordure si nécessaire */
+    }
+    
+    .table__head, .table__item {
+        text-align: center; /* Centre le texte des entêtes et des items */
+        width: auto; /* Permet aux éléments de s'adapter à leur contenu */
+        font-size: 1rem; /* Ajuste la taille de la police pour les éléments du tableau */
+    }
+
+    .table__item {
+        padding: 0.75em 12em 0.75em 0;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .header__image {
+        width: 103%; /* Permet à l'image de s'ajuster à la largeur du bloc */
+        height: auto; /* Maintient l'aspect ratio de l'image */
+        padding-top: 0;
+        border-radius: 0;
+    }
+
+    .main__hr {
+        width: 90%; /* Ajuste la largeur de la ligne horizontale à son conteneur */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .bloc-page {
+        width: 23.4em;
+    }
+
+    .main {
+        width: 23.4em;
+    }
+
+    .main__preparation {
+        width: 19.4em;
+    }
+
+    .header__image {
+        width: 30em;
+        margin-top: 22em;
+        height: auto;
+        padding-top: 0;
+        border-radius: 0;
+    }
+
+    .table__item {
+        padding: 0.75em 6em 0.75em 0;
+    }
+}
